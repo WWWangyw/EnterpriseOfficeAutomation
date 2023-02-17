@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataBase" Class="DataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\WorkManager\CompanyWork\App_Data\DataBase.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.T_Apply" Member="T_Apply">
+    <Type Name="T_Apply">
+      <Column Name="Apl_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Dpt_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apl_work" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Apl_Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apl_qualification" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Apl_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Apl_Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="T_Department_T_Apply" Member="T_Department" ThisKey="Dpt_ID" OtherKey="Dpt_ID" Type="T_Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Assess" Member="T_Assess">
+    <Type Name="T_Assess">
+      <Column Name="Ass_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Ass_Data" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ass_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Bulletin" Member="T_Bulletin">
+    <Type Name="T_Bulletin">
+      <Column Name="B_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="B_Content" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="B_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Calendar" Member="T_Calendar">
+    <Type Name="T_Calendar">
+      <Column Name="Cld_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Cld_Title" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Cld_Content" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Cld_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Department" Member="T_Department">
+    <Type Name="T_Department">
+      <Column Name="Dpt_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Dpt_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="T_Department_T_Apply" Member="T_Apply" ThisKey="Dpt_ID" OtherKey="Dpt_ID" Type="T_Apply" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Laborage" Member="T_Laborage">
+    <Type Name="T_Laborage">
+      <Column Name="Lbg_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Lbg_Year" Type="System.String" DbType="NVarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Lbg_Month" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Lbg_EndLaborage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Lbg_Sastion" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lbg_ss_Bus" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lbg_ss_Meal" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lbg_ss_Cess" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Lbg_inspire" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lbg_Punish" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lbg_Text" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_LaborageExpressions" Member="T_LaborageExpressions">
+    <Type Name="T_LaborageExpressions">
+      <Column Name="LE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Expressions" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Message" Member="T_Message">
+    <Type Name="T_Message">
+      <Column Name="Msg_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Msg_Receive" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Msg_Send" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Msg_Title" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Msg_Content" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Msg_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_SmtpInfo" Member="T_SmtpInfo">
+    <Type Name="T_SmtpInfo">
+      <Column Name="S_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="S_Host" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="S_Port" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="S_UserName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="S_Mail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="S_Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Training" Member="T_Training">
+    <Type Name="T_Training">
+      <Column Name="Trn_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Trn_Title" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Trn_Text" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Trn_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Trn_People" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Trn_Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_WorkHourst" Member="T_WorkHourst">
+    <Type Name="T_WorkHourst">
+      <Column Name="WH_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WH_StartTime" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="WH_EndTime" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="WH_Text" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_WorkingTime" Member="T_WorkingTime">
+    <Type Name="T_WorkingTime">
+      <Column Name="WT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="WT_OnWorking" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="WT_OffWorking" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="WT_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="WT_Text" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

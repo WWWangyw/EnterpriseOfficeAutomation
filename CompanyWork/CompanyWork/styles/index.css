@@ -1,0 +1,17 @@
+body,td,th {
+	font-size: 12px;
+}
+.1 {
+	border-top-width: 0.01mm;
+	border-right-width: 0.01mm;
+	border-bottom-width: 0.01mm;
+	border-left-width: 0.01mm;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: dashed;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}

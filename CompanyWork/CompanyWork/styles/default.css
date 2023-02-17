@@ -1,0 +1,72 @@
+﻿BODY {
+	FONT-SIZE: 12px; FONT-FAMILY: '宋体',Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: '宋体',Arial, Helvetica, sans-serif
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.black12sdw {
+	BACKGROUND-POSITION: 2px 50%; FONT-SIZE: 12px; COLOR: #000000; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.black12sx {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 100%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.black12 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.bkbox {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.red14b {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #993300; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.txt14 {
+	FONT-SIZE: 14px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.hbox {
+	BORDER-RIGHT: #b4b4b4 1px solid; BORDER-TOP: #b4b4b4 1px solid; BORDER-LEFT: #b4b4b4 1px solid; BORDER-BOTTOM: #b4b4b4 1px solid
+}
+.green12 {
+	FONT-SIZE: 12px; COLOR: #146d65; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.w12 {
+	FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 130%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.g12 {
+	FONT-SIZE: 12px; COLOR: #05736f; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.tt18 {
+	FONT-SIZE: 18px; COLOR: #000000; FONT-FAMILY: "黑体"; TEXT-DECORATION: none
+}
+.tt16 {
+	FONT-SIZE: 13px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.e {
+	FONT-SIZE: 12px; COLOR: #cc6600; FONT-STYLE: normal; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.black14:link {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.black14:visited {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+#Layer1 {
+	Z-INDEX: 1; LEFT: 14px; WIDTH: 327px; POSITION: absolute; TOP: 390px; HEIGHT: 210px
+}
+.style7 {
+	FONT-SIZE: 18px; COLOR: #660000; LINE-HEIGHT: 120%; FONT-FAMILY: "黑体"; TEXT-DECORATION: none
+}
+.style20 {
+	COLOR: #ffffff
+}
+.style38 {
+	FONT-SIZE: 20px
+}
+.STYLE42 {
+	FONT-SIZE: 18px; COLOR: #993300; FONT-FAMILY: "黑体"; TEXT-DECORATION: none
+}
+.STYLE46 {
+	FONT-SIZE: 16px; COLOR: #000000
+}

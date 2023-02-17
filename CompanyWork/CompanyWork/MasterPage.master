@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<head runat="server">
+    <link href="CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+
+        .auto-style3 {
+            height: 50px;
+            width: 238px;
+            margin-left: 0px;
+        }
+        
+
+        .auto-style8 {
+            margin-bottom: 0px;
+        }
+
+
+        .auto-style2 {
+            width: 501px;
+            height: 571px;
+            margin-left:0px auto;
+            margin-top:0px auto;
+            margin-right: 0px;
+        }
+        .auto-style9 {
+            width: 775px;
+            margin-left: 375px;
+        }
+        .auto-style10 {
+            height: 2px;
+        }
+        .auto-style11 {
+            height: 20px;
+        }
+        </style>
+</head>
+<form id="form1" runat="server">
+<table cellspacing="0" cellpadding="0" align="center" border="0" class="auto-style9">
+    <tr>
+        <td  align="left">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td bgcolor="" class="auto-style10">
+                    <marquee direction="up" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="1"
+                        scrolldelay="30" class="auto-style3">
+                        <asp:DataList ID="DataList2" runat="server">
+                        </asp:DataList>
+                        <asp:DataList ID="DataList1" runat="server" DataSourceID="LinqDataSource1">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <%# DataBinder.Eval(Container.DataItem, "B_Content")%>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="DataBaseDataContext"
+                            TableName="T_Bulletin">
+                        </asp:LinqDataSource></td>
+                    <td style="text-align: right; font-size:14px; vertical-align:bottom;" align="left" class="auto-style10">
+                    <asp:LoginName ID="LoginName1" runat="server" />
+                    &nbsp;
+                    <asp:HyperLink ID="HyperLink1" runat="server">无新消息</asp:HyperLink>
+                    &nbsp;
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" LogoutText="退出登录" />
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <tr>
+                    <td valign="top" align="left" style="width: 775px;">
+                    <asp:Menu ID="Menu2" runat="server" BackColor="#3399FF" DataSourceID="XmlDataSource2"
+                        DynamicHorizontalOffset="2" Font-Names="Impact" ForeColor="White" Height="20px"
+                        Orientation="Horizontal" StaticSubMenuIndent="10px" Width="786px" StaticDisplayLevels="2"
+                        StaticEnableDefaultPopOutImage="False" CssClass="auto-style8" Font-Bold="True" Font-Overline="False">
+
+                        <DataBindings>
+                            <asp:MenuItemBinding DataMember="siteMapNodes" Text="首页" NavigateUrlField="url" />
+                            <asp:MenuItemBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" />
+                            <asp:MenuItemBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" />
+                            <asp:MenuItemBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" />
+                        </DataBindings>
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#3399FF"
+                            BorderColor="#3399FF" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" BorderColor="#3399FF" />
+                        <StaticMenuStyle BackColor="#3399FF" BorderColor="#3399FF" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <DynamicSelectedStyle BackColor="#3399FF" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#3399FF"
+                            BorderColor="#3399FF" />
+                    </asp:Menu>
+                    <asp:XmlDataSource ID="XmlDataSource2" runat="server" DataFile="~/Menu.xml"></asp:XmlDataSource>
+                    </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+                    <div style="text-align: center; vertical-align:middle; " class="auto-style2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+        </td>
+    </tr>
+</table>
+    <br />
+    <br />
+</form>
+

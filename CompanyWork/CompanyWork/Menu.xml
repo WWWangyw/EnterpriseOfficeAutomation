@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMapNodes url="WorkSystem.aspx" title="菜单"  description="办公自动化系统">
+
+  <siteMapNode url="" title="个人中心"  description="">
+    <siteMapNode url="" title="密码管理"  description="" >
+      <siteMapNode url="UserCenter/PasswordEdit.aspx" title="密码修改"  description="" />
+
+    </siteMapNode>
+    <siteMapNode url="" title="短信管理"  description="">
+      <siteMapNode url="UserCenter/MessageSend.aspx" title="发送短信"  description="" />
+      <siteMapNode url="UserCenter/MessageList.aspx" title="接收短信"  description="" />
+      <siteMapNode url="UserCenter/MessageSendHistory.aspx" title="发送记录"  description="" />
+      <siteMapNode url="UserCenter/MessageHistory.aspx" title="接收记录"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="日程管理"  description="" >
+      <siteMapNode url="UserCenter/Canlendar.aspx" title="添加日程"  description="" />
+      <siteMapNode url="UserCenter/CanlendarList.aspx" title="今天日程"  description="" />
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode url="" title="系统管理"  description="">
+    <siteMapNode url="" title="权限管理"  description="" >
+      <siteMapNode url="System/Role.aspx?mode=0" title="角色管理"  description="" />
+      <siteMapNode url="System/Role.aspx?mode=1" title="用户管理"  description="" />
+      <siteMapNode url="System/Role.aspx?mode=2" title="用户角色管理"  description="" />
+    </siteMapNode>
+    <siteMapNode url="System/WorkTime.aspx" title="工作时间管理"  description="" />
+    <siteMapNode url="System/Department.aspx" title="部门管理"  description="" />
+    <siteMapNode url="System/Bulletin.aspx" title="公告管理"  description="" />
+  </siteMapNode>
+  <siteMapNode url="" title="公共模块"  description="">
+    <siteMapNode url="" title="文件资源"  description="" >
+      <siteMapNode url="Commonality/FileUpload.aspx" title="文件上传"  description="" />
+      <siteMapNode url="Commonality/FileList.aspx" title="文下载件"  description="" />
+      <siteMapNode url="Commonality/FileSearch.aspx" title="查询文件"  description="" />
+    </siteMapNode>
+    <siteMapNode url="Commonality/UserOnline.aspx" title="在线人员管理"  description="" />
+    <siteMapNode url="Commonality/Bulletin.aspx" title="浏览公告"  description="" />
+  </siteMapNode>
+  <siteMapNode url="" title="员工管理"  description="">
+    <siteMapNode url="" title="培训管理"  description="" >
+      <siteMapNode url="Personnel/Training.aspx" title="培训登记"  description="" />
+      <siteMapNode url="Personnel/TrainingList.aspx" title="浏览培训记录"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="招聘管理"  description="" >
+      <siteMapNode url="Personnel/StastionApply.aspx" title="招聘申报"  description="" />
+      <siteMapNode url="Personnel/StastionApplyList.aspx" title="申报处理"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="绩效管理"  description="" >
+      <siteMapNode url="Personnel/Assess.aspx" title="员工考核"  description="" />
+      <siteMapNode url="Personnel/AssessList.aspx" title="考核维护"  description="" />
+    </siteMapNode>
+  </siteMapNode>
+
+</siteMapNodes>

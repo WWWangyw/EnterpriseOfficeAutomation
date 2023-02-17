@@ -1,0 +1,24 @@
+﻿body
+{
+	background-color: White;
+	margin:0px auto;
+	font-family: 楷体_GB2312;
+}
+
+body,td,th {
+	font-size: 12pt;
+}
+table {
+
+    background-color: #C5D6FC;
+
+    
+    font-size: medium;
+}
+
+.top_1
+{
+	background-color: #b5c2df;
+}
+
+
